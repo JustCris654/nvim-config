@@ -1,6 +1,19 @@
 local lsp = require('lsp-zero').preset({})
 
-lsp.ensure_installed({'tsserver', 'rust_analyzer'})
+lsp.ensure_installed({
+    'tsserver',
+    'rust_analyzer',
+    'eslint',
+    'clangd',
+    'bashls',
+    'cmake',
+    'dockerls',
+    'gopls',
+    'marksman',
+    'zls',
+    'prismals',
+    'lua_ls'
+})
 
 lsp.on_attach(function(client, bufnr)
     local opts = {
