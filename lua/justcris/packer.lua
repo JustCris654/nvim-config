@@ -14,11 +14,11 @@ return require('packer').startup(function(use)
 
     use({
         'rose-pine/neovim',
-        as = 'rose-pine',
-        config = function()
-            vim.cmd('colorscheme rose-pine')
-        end
+        as = 'rose-pine'
     })
+
+    use { "ellisonleao/gruvbox.nvim" }
+
 
     use('nvim-treesitter/nvim-treesitter', {
         run = ':TSUpdate'
@@ -57,4 +57,6 @@ return require('packer').startup(function(use)
             }
         end
     }
+
+    use('github/copilot.vim')
 end)
