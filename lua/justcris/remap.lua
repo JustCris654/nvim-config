@@ -2,7 +2,27 @@ vim.g.mapleader = " "
 
 -- save file
 vim.keymap.set("n", "<leader>fs", vim.cmd.update)
-vim.keymap.set("n", "<leader>ff", vim.lsp.buf.format)
+vim.keymap.set("n", "<leader>ff", function()
+    vim.lsp.buf.format()
+    vim.cmd.update()
+end)
+
+vim.keymap.set("n", "vig", "ggVG")
+
+-- windows management
+vim.keymap.set({ "n", "v" }, "<leader>wq", vim.cmd.exit)
+vim.keymap.set({ "n", "v" }, "<leader>wc", vim.cmd.close)
+-- and creation
+vim.keymap.set({ "n", "v" }, "<leader>wv", vim.cmd.vsplit)
+vim.keymap.set({ "n", "v" }, "<leader>ws", vim.cmd.split)
+
+-- windows navigation
+vim.keymap.set({ "n", "v" }, "<leader>ww", "<C-w>w")
+vim.keymap.set({ "n", "v" }, "<leader>wh", "<C-w>h")
+vim.keymap.set({ "n", "v" }, "<leader>wh", "<C-w>h")
+vim.keymap.set({ "n", "v" }, "<leader>wl", "<C-w>l")
+vim.keymap.set({ "n", "v" }, "<leader>wj", "<C-w>j")
+vim.keymap.set({ "n", "v" }, "<leader>wk", "<C-w>k")
 
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
