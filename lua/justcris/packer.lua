@@ -57,4 +57,22 @@ return require('packer').startup(function(use)
     }
 
     use('github/copilot.vim')
+
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
+
+    -- use {
+    --     "folke/which-key.nvim",
+    --     config = function()
+    --         vim.o.timeout = true
+    --         vim.o.timeoutlen = 300
+    --         require("which-key").setup {
+    --             -- your configuration comes here
+    --             -- or leave it empty to use the default settings
+    --             -- refer to the configuration section below
+    --         }
+    --     end
+    -- }
 end)
