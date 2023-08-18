@@ -57,10 +57,6 @@ return require('packer').startup(function(use)
 
     -- utilities
     use('mg979/vim-visual-multi')
-    use {
-        "windwp/nvim-autopairs",
-        config = function() require("nvim-autopairs").setup {} end
-    }
     use('numToStr/Comment.nvim')
     use {
         "windwp/nvim-autopairs",

@@ -43,12 +43,34 @@ require("formatter").setup {
             require("formatter.filetypes.typescript").prettier,
         },
 
-        -- Use the special "*" filetype for defining formatter configurations on
-        -- any filetype
+        rust = {
+            function()
+                return {
+                    exe = "rustfmt",
+                    args = {
+                        "--edition 2021"
+                    },
+                    stdin = true,
+                }
+            end
+        },
+
+        c = {
+            require("formatter.filetypes.c").clangformat,
+        },
+
+        cpp = {
+            require("formatter.filetypes.c").clangformat,
+        },
+
+        zig = {
+            require("formatter.filetypes.zig").zigfmt,
+        },
+
         ["*"] = {
-            -- "formatter.filetypes.any" defines default configurations for any
-            -- filetype
-            require("formatter.filetypes.any").remove_trailing_whitespace
+            function()
+                vim.lsp.buf.format();
+            end
         }
     }
 }
