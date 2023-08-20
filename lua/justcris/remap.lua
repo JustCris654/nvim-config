@@ -23,6 +23,8 @@ vim.keymap.set({ "n", "v" }, "<leader>wl", "<C-w>l")
 vim.keymap.set({ "n", "v" }, "<leader>wj", "<C-w>j")
 vim.keymap.set({ "n", "v" }, "<leader>wk", "<C-w>k")
 
+vim.keymap.set("n", "<leader>,", "<cmd>bprevious<CR>")
+
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")

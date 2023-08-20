@@ -14,4 +14,4 @@ function SetColorScheme(color)
 
 end
 
-SetColorScheme()
+SetColorScheme("kanagawa-dragon")

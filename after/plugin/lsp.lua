@@ -49,7 +49,7 @@ lsp.setup_nvim_cmp({
     }
 }) ]]
 
-lsp.on_attach(function(client, bufnr)
+local on_attach = function(client, bufnr)
 	local opts = {
 		buffer = bufnr,
 		remap = false,
@@ -93,8 +93,17 @@ lsp.on_attach(function(client, bufnr)
 	vim.keymap.set("i", "<C-h>", function()
 		vim.lsp.buf.signature_help()
 	end, opts)
-end)
+end
+lsp.on_attach(on_attach)
 
 require("lspconfig").lua_ls.setup(lsp.nvim_lua_ls())
+require("lspconfig").clangd.setup({
+	on_attach = on_attach,
+	capabilities = vim.lsp.protocol.make_client_capabilities(),
+	cmd = {
+		"clangd",
+		"--offset-encoding=utf-16",
+	},
+})
 
 lsp.setup()
