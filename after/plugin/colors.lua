@@ -3,6 +3,7 @@
 -- })
 function SetColorScheme(color)
     color = color or "rose-pine"
+    vim.o.termguicolors = true
     vim.cmd.colorscheme(color)
 
     -- vim.api.nvim_set_hl(0, "Normal", {
