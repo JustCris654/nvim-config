@@ -1,5 +1,13 @@
 local telescope = require("telescope.builtin")
 
+require("telescope").setup({
+	defaults = {
+		file_ignore_patterns = {
+			"include",
+		},
+	},
+})
+
 vim.keymap.set("n", "<leader><leader>", telescope.git_files, {})
 
 vim.keymap.set("n", "<leader>pf", telescope.find_files, {})
