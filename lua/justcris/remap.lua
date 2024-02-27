@@ -18,7 +18,6 @@ vim.keymap.set({ "n", "v" }, "<leader>ws", vim.cmd.split)
 -- windows navigation
 vim.keymap.set({ "n", "v" }, "<leader>ww", "<C-w>w")
 vim.keymap.set({ "n", "v" }, "<leader>wh", "<C-w>h")
-vim.keymap.set({ "n", "v" }, "<leader>wh", "<C-w>h")
 vim.keymap.set({ "n", "v" }, "<leader>wl", "<C-w>l")
 vim.keymap.set({ "n", "v" }, "<leader>wj", "<C-w>j")
 vim.keymap.set({ "n", "v" }, "<leader>wk", "<C-w>k")
