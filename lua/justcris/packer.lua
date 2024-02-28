@@ -209,6 +209,10 @@ return require("packer").startup(function(use)
         end
     }
 
+    use "lukas-reineke/indent-blankline.nvim"
+
+    use "danilamihailov/beacon.nvim"
+
     -- use {
     --     "folke/which-key.nvim",
     --     config = function()
