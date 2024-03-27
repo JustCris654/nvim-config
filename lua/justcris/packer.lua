@@ -4,6 +4,14 @@ return require("packer").startup(function(use)
     -- Packer can manage itself
     use("wbthomason/packer.nvim")
 
+
+    use "nvim-lua/plenary.nvim"
+    use {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        requires = { { "nvim-lua/plenary.nvim" } }
+    }
+
     -- navigation
     -- use({
     --     "nvim-telescope/telescope.nvim",
@@ -209,9 +217,11 @@ return require("packer").startup(function(use)
         end
     }
 
-    use "lukas-reineke/indent-blankline.nvim"
+    -- use "lukas-reineke/indent-blankline.nvim"
 
     use "danilamihailov/beacon.nvim"
+
+    use 'eandrju/cellular-automaton.nvim'
 
     -- use {
     --     "folke/which-key.nvim",
