@@ -1,6 +1,6 @@
 local lsp = require("lsp-zero").preset({})
 
-vim.lsp.log.set_level(vim.log.levels.OFF)
+vim.lsp.set_log_level("off")
 
 lsp.ensure_installed({
     "tsserver",
