@@ -40,6 +40,8 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
+vim.keymap.set("v", "p", [[P]])
+
 -- next greatest remap ever : asbjornHaland
 -- yank selection to system clipboard
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
@@ -62,6 +64,6 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 -- leader x makes the current file executable
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
-vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim/<CR>");
-vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
-vim.keymap.set("n", "<leader>ms", "<cmd>CellularAutomaton scramble<CR>");
+vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim/<CR>")
+vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>")
+vim.keymap.set("n", "<leader>ms", "<cmd>CellularAutomaton scramble<CR>")
