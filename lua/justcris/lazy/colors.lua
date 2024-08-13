@@ -9,6 +9,7 @@ return {
     {
         "rebelot/kanagawa.nvim",
         lazy = false,
+        priority = 1000,
         config = function()
             SetColorScheme("kanagawa-dragon")
         end
@@ -16,7 +17,6 @@ return {
     {
         "ellisonleao/gruvbox.nvim",
         name = "gruvbox",
-        lazy = true,
         config = function()
             require("gruvbox").setup({
                 terminal_colors = true, -- add neovim terminal colors
@@ -46,7 +46,6 @@ return {
     },
     {
         "folke/tokyonight.nvim",
-        lazy = true,
         config = function()
             require("tokyonight").setup({
                 -- your configuration comes here
@@ -70,7 +69,6 @@ return {
     {
         "rose-pine/neovim",
         name = "rose-pine",
-        lazy = true,
         config = function()
             require('rose-pine').setup({
                 disable_background = true,
@@ -79,5 +77,26 @@ return {
                 },
             })
         end
+    },
+    { "catppuccin/nvim",      name = "catppuccin" },
+    { "sainnhe/everforest",   name = "everforest" },
+    { "navarasu/onedark.nvim" },
+    {
+        'sainnhe/sonokai',
+        lazy = false,
+        config = function()
+            -- Optionally configure and load the colorscheme
+            -- directly inside the plugin declaration.
+            vim.g.sonokai_enable_italic = true
+        end
+    },
+    { "lancewilhelm/horizon-extended.nvim" },
+    {
+        'projekt0n/caret.nvim',
+        lazy = false, -- make sure we load this during startup if it is your main colorscheme
+        -- config = function()
+        --     require('caret').setup({
+        --     })
+        -- end,
     },
 }
